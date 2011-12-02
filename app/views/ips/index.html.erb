@@ -1,0 +1,14 @@
+<h1>Ip address</h1>
+<table>
+  <tr>
+    <th>Ipaddress</th>
+    <th>status</th>
+  </tr>
+  <% @ips.each do |ip| -%>
+    <tr>
+      <td><%= ip.ipaddress %></td>
+      <td><%= ip.status %></td>
+    </tr>
+  <% end -%>
+</table>
+<%= link_to "See networks table", networks_path %>
