@@ -26,4 +26,17 @@ class NetworksController < ApplicationController
     redirect_to :back
   end
 
+  def checkandcreateip
+    # redirect_to :back #заглушка
+    #
+    @network=Network.find(params[:id])
+    @network.getcheckipas_arr_ip_obj.each {|ip|
+      if ip.status=="online" 
+        ip.createcheckip
+      end
+    }
+
+    redirect_to :back
+  end
+
 end

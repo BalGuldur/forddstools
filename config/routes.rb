@@ -12,7 +12,12 @@ Forddstools::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-      resources :networks
+      resources :networks do
+        member do
+          get 'checkandcreateip'
+        end
+      end
+
       resources :ips, :only => :index
 
   # Sample resource route with options:

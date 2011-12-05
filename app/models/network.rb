@@ -29,5 +29,4 @@ class Network < ActiveRecord::Base
   def getcheckipas_arr_ip_obj
     return self.getnotabstractnetwork.getcheckipas_arr_ip_obj
   end
-
 end

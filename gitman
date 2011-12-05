@@ -1,0 +1,5 @@
+git checkout -b imiabranch
+git checkout master
+git merge imiabranch
+git commit -am 'blabla'
+git push -u origin master
